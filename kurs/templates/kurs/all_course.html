@@ -1,0 +1,42 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block title %}All Courses{% endblock %}
+{% block content %}
+
+    {# ALL COURSES #}
+      <div class="box-2">
+      <div class="container">
+        <h1>Курсы</h1>
+        <hr>
+        <div class="card-4">
+            {% for i in data %}
+          <div class="card-1">
+            <p class="text-buxg">{{ i.name }}</p>
+            <p class="text-opic">ОПИСАНИЕ:</p>
+            <div class="text-icon">
+              <div class="img-text"><img src="{% static 'img/soat.svg' %}" alt="">
+                <p class="text-bold">длительность: <br><span>{{ i.muddati }} месяца</span></p>
+              </div>
+              <div class="img-text"><img src="{% static 'img/ss.svg' %}" alt="">
+                <p class="text-bold"> посещаемость (нед.): <br> <span>{{ i.dars_soni }} раза</span></p>
+              </div>
+              <div class="img-text user-img"><img class="img-size" src="{% static 'img/user.svg' %}" alt="">
+                <p class="text-bold text-left-m">вид обучения: <br><span>{{ i.group }}</span></p>
+              </div>
+              <div class="img-text"><img src="{% static 'img/shopping-cart (1).svg' %}" alt="">
+                <p class="text-bold">стоимость <br><span>от {{ i.price }}$</span></p>
+              </div>
+            </div>
+            <div class="a">
+              <a href="{% url 'register' %}" class="btn-zact">записаться</a><br><br>
+              <a href="{% url 'detail' i.pk %}" class="btn-s">Детали курса</a>
+            </div>
+          </div>
+         {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    {% include 'foter.html' %}
+{% endblock %}

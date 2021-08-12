@@ -1,0 +1,20 @@
+{% load static %}
+{% include 'link.html' %}
+  <div class="navbar-slider-box">
+    <div class="rev_slider">
+        {% for i in dataAll.corusel %}
+            <div class="slider-nav">
+                <div class="photo" style="background: url({{ i.img.url }});">
+                    <div class="container">
+                        <div class="slider-text">
+                            <h1><span>{{ i.title1 }}</span> {{ i.title2 }}—</h1>
+                                <p>{{ i.p }}</p>
+                            <a href="{{ i.link }}" class="button_p">о компании</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+  </div>

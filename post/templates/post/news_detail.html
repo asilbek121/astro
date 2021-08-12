@@ -1,0 +1,30 @@
+{% extends 'navbar.html' %}
+{% include 'link.html' %}
+{% load static %}
+{% block title %}
+    postDetail
+{% endblock %}
+{% block index %}
+
+<header class="menu-link">
+    <div class="container">
+      <div class="menu-link-text">
+        <h1>О нас</h1>
+        <p>Главная <span class="slesh">/</span> <span>О нас</span></p>
+      </div>
+    </div>
+  </header>
+
+  <header class="menu-photo-news ">
+    <div class="container">
+          <div class="menu-photo-text-news" style="background-image: url({{ data1.img.url }}); width: 100%; height: 500px">
+      </div>
+        <h1 style="font-size: 20px">{{ data1.title }}</h1>
+      <h1>{{ data1.data }}</h1>
+      <p style="font-size: 19px">{{ data1.text }}</p>
+    </div>
+  </header>
+
+{% endblock %}
+
+{% include 'foter.html' %}

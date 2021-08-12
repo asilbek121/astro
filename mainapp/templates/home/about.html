@@ -1,0 +1,39 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block title %}
+  About
+{% endblock %}
+{% block index %}
+
+  <header class="menu-link">
+    <div class="container">
+      <div class="menu-link-text">
+        <h1>О нас</h1>
+        <p>Главная <span class="slesh">/</span> <span>О нас</span></p>
+      </div>
+    </div>
+  </header>
+
+
+  <header class="menu-photo">
+    <div class="container">
+        {% for i in data.io %}
+
+
+      <div class="menu-photo-text" style="background-image: url({{ i.img1.url }})">
+      </div>
+      <p>{{ i.text1 }}</p>
+
+      <div class="menu-photo-grid">
+        <div class="menu-photo-2" style="background-image: url({{ i.img2.url }})">
+        </div>
+        <div class="menu-text-2">
+          <h1>{{ i.title }}</h1>
+          <p>{{ i.text2 }}</p>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </header>
+{% include 'foter.html' %}
+{% endblock %}

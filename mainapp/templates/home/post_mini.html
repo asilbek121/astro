@@ -1,0 +1,27 @@
+{% load static %}
+{% include 'link.html' %}
+
+<script src="{% static 'js/main.js' %}"></script>
+{% block index %}
+
+    <div class="container">
+
+          <div class="box-new-text">
+            <h1>НОВОСТИ И ПУБЛИКАЦИИ</h1>
+          </div>
+          <div class="row">
+            {% for i in dataAll.post %}
+          <div class="col-sm-4 ">
+            <a href="{% url 'postDetail' i.pk %}" class="box-new-card-1">
+              <div class="box-new-img">
+                <img src="{{ i.img.url }}" alt="">
+              </div>
+              <p class="box-new-data">{{ i.data }}</p>
+              <h1>{{ i.title }}</h1>
+              <p class="box-new-p">{{ i.text }}</p>
+            </a>
+          </div>
+           {% endfor %}
+         </div>
+        </div>
+{% endblock %}

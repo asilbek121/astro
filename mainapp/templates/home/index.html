@@ -1,0 +1,95 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block index %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}
+        index
+    {% endblock %}</title>
+</head>
+<body>
+
+
+ {% include 'home/carousel.html' %}
+
+    {% include 'home/curs.html' %}
+
+
+    <div class="box-messange">
+      <div class="container">
+        <h1 class="text-ga">наша гарантия</h1>
+        <div class="c b">
+          <div class="lines">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <div class="messange-card">
+          <div class="grid message-e">
+            <div class="img"><img src="{% static 'img/img-garantia/1 (3).png' %}" alt=""></div>
+
+            <div class="text-card">
+              <h1>Трансляция уроков в режиме реального времени</h1>
+              <p>Главная цель академии выпуск кадров мирового уровня. Во время обучения учащиеся на курсах
+                программирования будут обеспечены необходимой учебной документацией и техникой</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="messange-card">
+          <div class="grid">
+            <div class=" text-card-2">
+              <h1>Преподаватели с опытом образования и работы зарубежом</h1>
+              <p>После успешного окончания определенного этапа обучения академия берет на себя ответственность по
+                трудоустройству выпускников. Главная цель академии выпуск кадров мирового уровня. </p>
+            </div>
+            <div class="img-2"><img src="{% static 'img/img-garantia/2 (1).png' %}" alt=""></div>
+          </div>
+        </div>
+
+        <div class="messange-card">
+          <div class="grid message-e">
+            <div class="img"><img src="{% static 'img/img-garantia/3 (2).png' %}" alt=""></div>
+            <div class="text-card">
+              <h1>Ежемесячные отчёты родителям и студентам об их успехах</h1>
+              <p>Главная цель академии выпуск кадров мирового уровня. Во время обучения учащиеся на курсах
+                программирования будут обеспечены необходимой учебной документацией и техникой</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="messange-card">
+          <div class="grid">
+            <div class=" text-card-2">
+              <h1>Телеграмм уведомления о пропусках занятий</h1>
+              <p>После успешного окончания определенного этапа обучения академия берет на себя ответственность по
+                трудоустройству выпускников. Главная цель академии выпуск кадров мирового уровня. </p>
+            </div>
+            <div class="img-4"><img src="{% static 'img/img-garantia/4.png' %}" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   {% include 'home/post_mini.html' %}
+
+
+
+    <div class="btn-block">
+      <div class="container">
+        <div class="btn-b">
+          <a class="box-new-btn" href="{% url 'post' %}">перейти в блог</a>
+        </div>
+      </div>
+    </div>
+
+ {% include 'home/man.html' %}
+
+    {% include 'foter.html' %}
+</body>
+</html>
+{% endblock %}

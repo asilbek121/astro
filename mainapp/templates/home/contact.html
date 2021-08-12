@@ -1,0 +1,38 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block title %}
+    contact
+{% endblock %}
+{% block index %}
+
+    <header class="menu-link">
+        <div class="container">
+            <div class="menu-link-text">
+                <h1>контакты</h1>
+                <p>Главная <span class="slesh">/</span> <span>Kонтакты</span></p>
+            </div>
+        </div>
+    </header>
+
+
+    <header class="menu-number-card">
+        <div class="container">
+            <div class="menu-number-card-grid">
+                <div class="menu-number">
+                    <p><span><img src="{% static 'img/tel.png' %}" alt=""></span>+998 97 460-44-38</p>
+                    <p><span><img src="{% static  'img/contact-img/lac.svg' %}" alt=""></span>Узбекистан, г. Ташкент, Ул. Садыка
+                        Азимова, 68</p>
+                    <p><span><img src="{% static 'img/contact-img/mail.svg' %}" alt=""></span>info@finexpert.uz</p>
+                </div>
+                <div class="menu-card">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d95911.33647822113!2d69.21873894437205!3d41.303875833596464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m5!1s0x38ae8ad3a88c3547%3A0x5a2c369b8229a594!2zU09TIElUIEFjYWRlbXksIFNvZGlxIEF6aW1vdiBrbydjaGFzaSwg0KLQvtGI0LrQtdC90YIsIFV6YmVraXN0YW4!3m2!1d41.303776299999996!2d69.28876509999999!4m0!5e0!3m2!1suz!2s!4v1625223863957!5m2!1suz!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% include 'foter.html' %}
+
+{% endblock %}
+

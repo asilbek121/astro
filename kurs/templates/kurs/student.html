@@ -1,0 +1,15 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block title %}Students{% endblock %}
+
+{% block index %}
+
+    {% for i in dict1.values %}
+        {% for a in i %}
+            <h1>{{ a.last_name }}</h1>
+        {% endfor %}
+
+{% endfor %}
+    {% include 'foter.html' %}
+{% endblock %}

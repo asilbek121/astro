@@ -1,0 +1,144 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block index %}
+
+<header class="menu-link">
+        <div class="container">
+            <div class="menu-link-text">
+                <h1>1с бухгалтерия</h1>
+                <p>Курсы<span class="slesh">/</span> <span>1С бухгалтерия</span></p>
+            </div>
+        </div>
+    </header>
+
+
+    <header class="menu-course">
+        <div class="container">
+            <div class="menu-coursee-text">
+                <div class="menu-course-img-text">
+                    <div class="img"> <img src="{% static 'img/course-img/1 (7).svg' %}" alt=""></div>
+                    <div class="text">
+                        <h1>Описание курса</h1>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt
+                            in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-course-img-text">
+                    <div class="img"> <img src="{% static 'img/course-img/2 (3).svg' %}" alt=""></div>
+                    <div class="text">
+                        <h1>Для кого?</h1>
+                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-course-img-text">
+                    <div class="img"> <img src="{% static 'img/course-img/3 (3).svg' %}" alt=""></div>
+                    <div class="text">
+                        <h1>Возраст учеников</h1>
+                        <p> От 18 лет
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-course-img-text">
+                    <div class="img"> <img src="{% static 'img/course-img/4 (3).svg' %}" alt=""></div>
+                    <div class="text">
+                        <h1>Описание курса</h1>
+                        <p>
+                        <div class="Stars" style="--rating: 2.3;" aria-label="Rating of this product is 2.3 out of 5.">
+
+                    </div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-course-img-text">
+                    <div class="img"> <img src="{% static 'img/course-img/5 (2).svg' %}" alt=""></div>
+                    <div class="text">
+                        <h1>требования для регистрации на данном курсе</h1>
+                        <p> Lorem ipsum dolor sit amet <br>
+                            Consectetur adipiscing elit <br>
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua <br>
+                            Ut enim ad minim veniam
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="c b">
+            <div class="lines lines-2">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-course-table">
+        <div class="container">
+            <h1>Прайс лист</h1>
+            <div class="table-responsive">
+            <table class="table table-striped">
+
+                <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td class="bold">Индивидуально</td>
+                        <td class="bold">Мини группа</td>
+                        <td class="bold">Группа</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Количество людей в <br>
+                            группе</th>
+                        <td>1</td>
+                        <td>2/4</td>
+                        <td>2/4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Частота уроков</th>
+                        <td>2 дня в неделю</td>
+                        <td>2 дня в неделю</td>
+                        <td>2 дня в неделю</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Стоимость</th>
+                        <td>1 000 000 сум</td>
+                        <td>600 000 сум</td>
+                        <td>500 000 сум</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">График занятий</th>
+                        <td>Пн-Чт. 16:00-17:30</td>
+                        <td>Пн-Чт. 16:00-17:30</td>
+                        <td>Пн-Чт. 16:00-17:30</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Уже записано</th>
+                        <td>-</td>
+                        <td>2 из 4</td>
+                        <td>2 из 4</td>
+                    </tr>
+                    <tr class="table-light">
+                        <th scope="row"></th>
+                        <td><a class="btn-zact" href="{% url 'register' %}">записаться</a></td>
+                        <td><a class="btn-zact" href="{% url 'register' %}">записаться</a></td>
+                        <td><a class="btn-zact" href="{% url 'register' %}">записаться</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% include 'foter.html' %}
+{% endblock %}

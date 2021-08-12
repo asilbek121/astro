@@ -1,0 +1,14 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 15" width="17" height="15">
+	<title>БЛОГ</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #00a0e3 } 
+	</style>
+	<g id="БЛОГ">
+		<g id="БЛОГ">
+			<g id="Группа 10">
+				<path id="Фигура 6 копия" class="shp0" d="M-0.01 15L7.53 7.5L-0.01 0L2.47 0L10.01 7.5L2.47 15L-0.01 15ZM6.99 15L14.53 7.5L6.99 0L9.47 0L17.01 7.5L9.47 15L6.99 15Z" />
+			</g>
+		</g>
+	</g>
+</svg>

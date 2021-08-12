@@ -1,0 +1,20 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+{% include 'link.html' %}
+<div class="container">
+    <div class="list-wrapper">
+        {% for i in data %}
+        <div class="list-item">
+          <a href="{% url 'postDetail' i.pk %}">
+          <div class="img"><img src="{{ i.img.url }}" alt=""></div>
+          <h4>{{ i.data }}</h4>
+          <h3>{{ i.title }}</h3>
+          <p>{{ i.text }}</p>
+          </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div id="pagination-container"></div>
+{% endblock %}

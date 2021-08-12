@@ -1,0 +1,28 @@
+{% load static %}
+{% include 'link.html' %}
+    <section class="carusel-klint">
+      <div class="container">
+        <h1 class="carusel-klint-h1">наши довольные клиенты</h1>
+        <div class="c b">
+          <div class="lines">
+            <div class="circle"></div>
+          </div>
+        </div>
+        <div class="slider-user">
+        {% for i in  dataAll.man %}
+          <div class="slide">
+            <img src="{{ i.img.url }}" alt="">
+            <h1 class="slider-h1">{{ i.name }}</h1>
+            <p class="slider-p">«{{ i.p }}»</p>
+          </div>
+        {% endfor %}
+        </div>
+        <div class="arrow-prev">
+          <img src="{% static 'img/img-slider/left.svg' %}" alt="left" style="margin-top: 35px;">
+        </div>
+        <div class="arrow-next">
+          <img src="{% static 'img/img-slider/reght.svg' %}" alt="reght" style="margin-top: 35px;">
+        </div>
+      </div>
+        <script src="{% static 'js/main.js' %}"></script>
+    </section>

@@ -1,0 +1,1 @@
+web: gunicorn Finexpers.wsgi --log-file-

@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}
+
+    {% endblock %}</title>
+
+{% include 'link.html' %}
+
+
+  <div class="container">
+    <div class="header">
+        <a href="{% url 'index' %}">
+      <div class="header-logo">
+        <img src="{% static 'img/logofin.png' %}" alt="">
+      </div>
+        </a>
+      <div class="header-mob-parent">
+        <div class="header-mob">
+          <ul class="header-menu">
+            <li class="header-menu-item"><a href="{% url 'about' %}" class="header-menu-link ">О нас</a></li>
+            <li class="header-menu-item"><a href="{% url 'kurs' %}" class="header-menu-link">курсы</a></li>
+            <li class="header-menu-item"><a href="{% url 'contact' %}" class="header-menu-link">контакты</a></li>
+          </ul>
+          <a href="tel:+998974604438" class="header-phone">
+            <img src="{% static 'img/tel.png' %}" alt="">
+            +998 97 460-44-38
+          </a>
+          <ul class="lang">
+            <li class="lang-item"><a href="#" class="lang-link active">рус</a></li>
+            <li class="lang-item"><a href="#" class="lang-link">uzb</a></li>
+          </ul>
+          <a href="{% url 'register' %}" class="header-link">записаться на курсы</a>
+        </div>
+      </div>
+      <button type="button" class="header-ham">
+        <svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6.10352e-05" y="22.0002" width="30" height="2.99999" rx="1.5" fill="#1D1D1D"></rect>
+          <rect x="6.10352e-05" y="10.9998" width="30" height="3" rx="1.5" fill="#1D1D1D"></rect>
+          <rect x="6.10352e-05" width="30" height="3" rx="1.5" fill="#1D1D1D"></rect>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+    {% block index %}
+
+    {% endblock %}
+{% block content %}
+
+{% endblock %}
+
+    </head>
+</html>
